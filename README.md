@@ -4,3 +4,4 @@ Database setup progress
 User authentication module
 Report card module added
 UI improvements
+Bug fixes and final cleanup
