@@ -2,3 +2,4 @@
 good to go
 Database setup progress
 User authentication module
+Report card module added
