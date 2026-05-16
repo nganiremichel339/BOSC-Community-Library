@@ -1,15 +1,25 @@
+ <input type="text" id="searchInput" onkeyup="searchResources()" placeholder="Search resources..." style="padding:10px; width:100%; margin-bottom:10px;">
  <h1>Resource Index</h1>
 
-<ul>
-  <li>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      JavaScript Resource
-    </a>
-  </li>
+<div id="resourceList">
 
-  <li>
-    <a href="https://www.python.org/about/gettingstarted/" target="_blank">
-      Python Resource
-    </a>
-  </li>
-</ul>
+  <a href="https://developer.mozilla.org">JavaScript Resource</a><br>
+  <a href="https://www.python.org">Python Resource</a><br>
+
+</div>
+<script>
+function searchResources() {
+    let input = document.getElementById("searchBox").value.toLowerCase();
+    let items = document.querySelectorAll(".resource-item");
+
+    items.forEach(item => {
+        let text = item.textContent.toLowerCase();
+        item.style.display = text.includes(input) ? "block" : "none";
+    });
+}
+
+document.getElementById("searchBox").addEventListener("keyup", searchResources);
+</script>
+<li class="resource-item">
+  <a href="https://developer.mozilla.org">JavaScript Resource</a>
+</li>
