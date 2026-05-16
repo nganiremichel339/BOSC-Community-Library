@@ -7,7 +7,27 @@
   <a href="https://www.python.org">Python Resource</a><br>
 
 </div>
+<select id="languageSelect" onchange="changeLanguage()">
+    <option value="en">English</option>
+    <option value="fr">French</option>
+</select>
 <script>
+    const translations = {
+    en: {
+        title: "Resource Index",
+        search: "Search Resources"
+    },
+    fr: {
+        title: "Index des ressources",
+        search: "Rechercher des ressources"
+    }
+};
+function changeLanguage() {
+    let lang = document.getElementById("languageSelect").value;
+
+    document.getElementById("title").innerText = translations[lang].title;
+    document.getElementById("searchLabel").innerText = translations[lang].search;
+}
 function searchResources() {
     let input = document.getElementById("searchBox").value.toLowerCase();
     let items = document.querySelectorAll(".resource-item");
