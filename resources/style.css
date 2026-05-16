@@ -1,0 +1,11 @@
+ .resource-item {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.resource-item:hover {
+    background-color: #e6f0ff;
+}
