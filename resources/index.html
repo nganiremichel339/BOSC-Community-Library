@@ -15,6 +15,15 @@ function searchResources() {
     items.forEach(item => {
         let text = item.textContent.toLowerCase();
         item.style.display = text.includes(input) ? "block" : "none";
+        function searchResources() {
+    let input = document.getElementById("searchInput").value.toLowerCase();
+    let items = document.getElementsByClassName("resource-item");
+
+    for (let i = 0; i < items.length; i++) {
+        let text = items[i].innerText.toLowerCase();
+        items[i].style.display = text.includes(input) ? "" : "none";
+    }
+}
     });
 }
 
@@ -23,3 +32,4 @@ document.getElementById("searchBox").addEventListener("keyup", searchResources);
 <li class="resource-item">
   <a href="https://developer.mozilla.org">JavaScript Resource</a>
 </li>
+<input type="text" id="searchInput" placeholder="Search resources..." onkeyup="searchResources()">
