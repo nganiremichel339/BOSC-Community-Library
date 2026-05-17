@@ -1,7 +1,6 @@
-# BOSC-Community-LibraryProject update Day 2
-good to go
-Database setup progress
-User authentication module
-Report card module added
-UI improvements
-Bug fixes and final cleanup
+ # BOSC Community Library
+
+## Navigation
+- [Community](community/)
+- [Resources](resources/)
+- [Documentation](docs/)
